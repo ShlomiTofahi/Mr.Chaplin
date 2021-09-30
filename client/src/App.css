@@ -291,8 +291,29 @@ body {
   height: 140px;
   background-color: white;
   border-radius: 100px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .garden-icon{
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
+}
+.project-icon{
+  width: 80px;
+  height: 80px;
+}
+.service-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.des-text{
+  -webkit-column-count:2; /* Chrome' Safari, Opera */
+	-moz-colum-count:2;	/*Firefox*/
+	column-count:2;
+  opacity: 0.6;
+
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
 export default class About extends Component {
 
@@ -16,19 +16,39 @@ export default class About extends Component {
 
     render() {
         return (
-            <div id="services" className='services shadow my-5' align='right' style={this.aboutStyle()}>
-                <di className='icon'>
-                    <img className='garden-icon' src="/icons/garden-icon.png" />
-                </di>
-                <di className='icon'>
-                    <img className='garden-icon' src="/icons/garden-icon.png" />
-                </di>
-                <di className='icon'>
-                    <img className='garden-icon' src="/icons/garden-icon.png" />
-                </di>
-                <di className='icon'>
-                    <img className='garden-icon' src="/icons/garden-icon.png" />
-                </di>
+            <div style={this.aboutStyle()} className='shadow my-5'>
+                <div id="services" className='services my-5'>
+                    <div className='service-item'>
+                        <div className='icon'>
+                            <img className='garden-icon' src="/icons/clean-icon.png" />
+                        </div>
+                        <h4>שירותי נקיון</h4>
+                    </div>
+                    <div className='service-item'>
+                        <div className='icon'>
+                            <img className='garden-icon' src="/icons/maintenance-icon.png" />
+                        </div>
+                        <h4>ניהול ואחזקת מבנים</h4>
+                    </div>
+                    <div className='service-item'>
+                        <div className='icon'>
+                            <img className='garden-icon' src="/icons/gardening-icon.png" />
+                        </div>
+                        <h4>שירותי גינון</h4>
+                    </div>
+                    <div className='service-item'>
+                        <div className='icon'>
+                            <img className='project-icon' src="/icons/project-icon.png" />
+                        </div>
+                        <h4>פרויקטים</h4>
+                    </div>
+                </div>
+                <small><p className='des-text'>
+                    נקיון שוטף ליצירת סביבת מגורים / עבודה נעימה זהו דבר הכרחי לשיפור האווירה ואורח החיים ,
+                    <br />
+                    <br />
+                    חברתנו דואגת לנקיון ברמה הגבוה ביותר עם אנשי מקצוע, חומרים ומכשור הכי מתקדם בתחום כמו כן אצלנו תוכלו למצוא גם שירותי פוליש ונקיון לאחר בניה
+                </p></small>
             </div>
         )
     }

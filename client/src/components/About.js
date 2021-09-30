@@ -21,7 +21,7 @@ export default class About extends Component {
                             החזון שלנו
                         </h2> */}
                 <h2 style={headerStyle} align='center' className='display-4'>החזון שלנו</h2>
-                <p className='lead'>
+                <p className='lead des-text'>
                     מיסטר צ׳פלין הינה חברה העוסקת בניהול ואחזקת מבנים , תפעול וביצוע פרויקטים רב תחומיים.
                     חברתנו שמה לעצמה כערך עליון שקיפות והגינות מקסימלית מול הלקוח , חדשנות  ומצויינות
                     <br /><br />
