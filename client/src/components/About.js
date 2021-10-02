@@ -5,7 +5,7 @@ export default class About extends Component {
     aboutStyle = () => {
         return {
             margin: '0 auto',
-            // backgroundColor: '#323232',
+            // backgroundColor: '#575757',
             color: 'white',
             width: window.innerWidth >= 992 ? '60%' : '90%',
             padding: '24px',
@@ -16,12 +16,12 @@ export default class About extends Component {
 
     render() {
         return (
-            <div id="about" className='shadow my-5' align='right' style={this.aboutStyle()}>
+            <div id="about" className=' my-5' align='right' style={this.aboutStyle()}>
                 {/* <h2 align='center' className='brand display-4 pt-4' style={window.innerWidth >= 992 ? { fontFamily: "'Shadows Into Light', Kimberly Geswein", opacity: '0.4' } : { fontFamily: "'Shadows Into Light', Kimberly Geswein", opacity: '0.4', fontSize: '2.0em' }}>
                             החזון שלנו
                         </h2> */}
-                <h2 style={headerStyle} align='center' className='display-4'>החזון שלנו</h2>
-                <p className='lead des-text'>
+                <h2 style={headerStyle} align='center' className='display-1'>החזון שלנו</h2>
+                <p className='lead'>
                     מיסטר צ׳פלין הינה חברה העוסקת בניהול ואחזקת מבנים , תפעול וביצוע פרויקטים רב תחומיים.
                     חברתנו שמה לעצמה כערך עליון שקיפות והגינות מקסימלית מול הלקוח , חדשנות  ומצויינות
                     <br /><br />

@@ -118,11 +118,10 @@ export default class Contact extends Component {
 
     render() {
         return (
-            <div id="contact" class='contact-fullpage' align='right'>
-                <Container className='mt-4 mb-4'>
-                    {/* <h1 class="brand"><span><strong>GDog</strong></span><Icon icon={petsIcon} /> | Contact Us</h1> */}
-                    <div class="wrapper animated bounceInLeft">
-                        <div class="contact-info">
+            <div id="contact" className='contact-fullpage my-5'>
+                {/* <Container className='mt-4 mb-4'> */}
+                    {/* <div class="wrapper animated bounceInLeft"> */}
+                        {/* <div class="contact-info">
                             <h3>לפרטים נוספים והזמנות:</h3>
                             <ul class='pb-5 pr-0 pr-xl-3 text-right'>
                                 <li><i class="fa fa-road"></i> משה רבנו 165, שדרות</li>
@@ -153,33 +152,25 @@ export default class Contact extends Component {
                             </ul>
 
                             <img style={this.imgStyle()} src='/images/contact.jpg' alt='' />
-                        </div>
-                        <div class="contact">
-                            <h1 style={{ color: '#7c6f5a7a' }}>נשמח לשמוע ממכם, ולהיות לשירוכם!</h1>
+                        </div> */}
+                        <div className="contact">
+                            {/* <h1 style={{ color: '#7c6f5a7a' }}>נשמח לשמוע ממכם, ולהיות לשירוכם!</h1> */}
                             {/* {this.state.msg ? <Alert color={this.state.msgAlery} isOpen={this.state.visible} toggle={this.onDismiss}>{this.state.msg}</Alert>
                         : null} */}
-                            <h3 class='mb-4'>שלח לנו מייל:</h3>
+                            <h3 class='text-header-color mb-4'>השאירו פרטים ונחזור אליכם בהקדם</h3>
                             <Form onSubmit={this.onSubmit}>
                                 <FormGroup className='contact-form'>
                                     <p>
-                                        <label>שם מלא</label>
-                                        <Input onChange={this.onChange} type="text" name="name" defaultValue={this.state.name} />
+                                        <input className='input' onChange={this.onChange} type="text" name="name" defaultValue={this.state.name} placeholder="שם" />
                                     </p>
                                     <p>
-                                        <label>נושא</label>
-                                        <Input onChange={this.onChange} type="text" name="title" defaultValue={this.state.title} />
+                                        <input className='input' onChange={this.onChange} type="text" name="title" defaultValue={this.state.title} placeholder="טלפון" />
                                     </p>
                                     <p>
-                                        <label>כתובת דוא"ל</label>
-                                        <Input onChange={this.onChange} type="email" name="email" defaultValue={this.state.email} />
-                                    </p>
-                                    <p>
-                                        <label>מספר טלפון</label>
-                                        <Input onChange={this.onChange} type="number" name="phone" defaultValue={this.state.phone} />
+                                        <input className='input' onChange={this.onChange} type="email" name="email" defaultValue={this.state.email} placeholder="מייל" />
                                     </p>
                                     <p class="full">
-                                        <label>הודעה</label>
-                                        <textarea onChange={this.onChange} name="message" rows="5" defaultValue={this.state.message}></textarea>
+                                        <textarea className='input' onChange={this.onChange} name="message" rows="5" defaultValue={this.state.message} placeholder="פרטים נוספים" ></textarea>
                                     </p>
                                     <p class="full">
                                         <button type="submit">שלח</button>
@@ -187,8 +178,8 @@ export default class Contact extends Component {
                                 </FormGroup>
                             </Form>
                         </div>
-                    </div>
-                </Container>
+                    {/* </div> */}
+                {/* </Container> */}
             </div>
         )
     }

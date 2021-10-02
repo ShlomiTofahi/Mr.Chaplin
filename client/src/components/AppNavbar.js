@@ -61,16 +61,16 @@ export default class AppNavbar extends Component {
                         <Collapse onClick={() => { this.setState({ isOpen: false }) }} isOpen={this.state.isOpen} navbar >
                             <Nav className='header-tab m-auto' navbar>
                                 <NavItem>
-                                    <Link style={{ float: 'right' }} onClick={this.openTab.bind(this)} className={'navlink header-tablinks py-2 nav-link px-3 px-md-4 px-lg-5 d-md-inline-block lead'} to='#about'>אודות</Link>
+                                    <a style={{ float: 'right' }} onClick={this.openTab.bind(this)} className={'navlink header-tablinks py-2 nav-link px-3 px-md-4 px-lg-5 d-md-inline-block lead'} href='#about'>אודות</a>
                                 </NavItem>
                                 <NavItem>
                                     <a style={{ float: 'right' }} onClick={this.openTab.bind(this)} className={'navlink header-tablinks py-2 nav-link px-3 px-md-4 px-lg-5 d-md-inline-block lead'} href='#contact'>צור קשר</a>
                                 </NavItem>
                                 <NavItem>
-                                    <Link style={{ float: 'right' }} onClick={this.openTab.bind(this)} className={'navlink header-tablinks py-2 nav-link px-3 px-md-4 px-lg-5 d-md-inline-block lead'} to='#services'>שירותי ניהול</Link>
+                                    <a style={{ float: 'right' }} onClick={this.openTab.bind(this)} className={'navlink header-tablinks py-2 nav-link px-3 px-md-4 px-lg-5 d-md-inline-block lead'} href='#services'>שירותי ניהול</a>
                                 </NavItem>
                                 <NavItem>
-                                    <Link style={{ float: 'right' }} onClick={this.openTab.bind(this)} className={'navlink header-tablinks py-2 nav-link px-3 px-md-4 px-lg-5 d-md-inline-block lead'} to='#home'>עמוד הבית</Link>
+                                    <a style={{ float: 'right' }} onClick={this.openTab.bind(this)} className={'navlink header-tablinks py-2 nav-link px-3 px-md-4 px-lg-5 d-md-inline-block lead'} href='#home'>עמוד הבית</a>
                                 </NavItem>
                             </Nav>
                         </Collapse>

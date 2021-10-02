@@ -7,6 +7,7 @@ export default class Home extends Component {
         return (
 
             <div
+                id='home'
                 style={{
                     backgroundColor: '#282c34',
                     width: '100%',
