@@ -24,6 +24,7 @@ export default class CoverImage extends Component {
                                 <div class="elementor-column-wrap elementor-element-populated">
                                     <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-element-bf0a8f8 elementor-widget elementor-widget-heading" data-id="bf0a8f8" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container"> <h3 class="elementor-heading-title elementor-size-default">בדיקה ראשונה</h3></div></div><div class="elementor-element elementor-element-9207f77 elementor-widget elementor-widget-heading" data-id="9207f77" data-element_type="widget" data-widget_type="heading.default">
                                             <div class="elementor-widget-container"> <h1 class="site-header elementor-heading-title elementor-size-default">מיסטר צ'פלין</h1></div></div><div class="elementor-element elementor-element-1e77f8f elementor-widget elementor-widget-heading" data-id="1e77f8f" data-element_type="widget" data-widget_type="heading.default">
                                             <div class="elementor-widget-container"> <h2 class="elementor-heading-title elementor-size-default">ניהול מבנים &bull; אחזקה &bull; שירותי נקיון</h2></div></div><div class="elementor-element elementor-element-9207f77 elementor-widget elementor-widget-heading" data-id="9207f77" data-element_type="widget" data-widget_type="heading.default">
                                             {/* <div class="elementor-widget-container"> <h2 class="elementor-heading-title elementor-size-default">בפריסה ארצית</h2></div></div><div class="elementor-element elementor-element-4bc6627 elementor-widget elementor-widget-spacer" data-id="4bc6627" data-element_type="widget" data-widget_type="spacer.default"> */}
@@ -42,7 +43,7 @@ export default class CoverImage extends Component {
                                                             <i aria-hidden="true" class="fas fa-phone-alt">
                                                             </i>
                                                         </span>
-                                                        <span class="elementor-button-text">054-8353066</span>
+                                                        {/* <span class="elementor-button-text">054-8353066</span> */}
                                                     </span>
                                                     </a>
                                                 </div>

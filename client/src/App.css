@@ -48,6 +48,10 @@ body {
   }
 }
 
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+
 .main-box {
   background-color: rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.5);
@@ -178,6 +182,7 @@ body {
 
 .site-header{
   color:#eba235;
+  letter-spacing: 6px;
 }
 
 .elementor-section{
@@ -324,6 +329,7 @@ button{
 }
 .service-item{
   color:#eba235;
+  
   /* opacity: 0.6; */
   transition: All 1s ease;
 
@@ -371,4 +377,24 @@ button{
   position:fixed;
   left:1%;
   top:30%;
+}
+
+.text-bold{
+  opacity: 1;
+  /* font-family: 'Assistant', sans-serif; */
+
+  font-weight: 500;
+  /* color:red; */
+}
+
+.regular-btn{
+  color:#eba235;
+}
+.regular-btn:hover{
+  color:#af6900;
+}
+
+.orange-modal .modal-content{
+  background-color: #eba235;
+  color: rgba(255, 255, 255, 0.712);
 }
