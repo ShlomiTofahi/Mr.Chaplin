@@ -19,7 +19,7 @@ export default class About extends Component {
             color: 'white',
             width: window.innerWidth >= 992 ? '60%' : '90%',
             padding: '24px',
-            opacity: '0.7',
+            // opacity: '0.7',
 
         };
     };
@@ -34,7 +34,7 @@ export default class About extends Component {
                     הניהול שלנו <br />
                     השקט שלכם
                 </h2>
-                <p className='lead mt-5'>
+                <p className='about-text lead mt-5'>
                     <strong className='text-bold'>
                         מיסטר צ׳פלין הינה חברה העוסקת בניהול ואחזקת מבנים , תפעול וביצוע פרויקטים רב תחומיים.
                         חברתנו שמה לעצמה כערך עליון שקיפות והגינות מקסימלית מול הלקוח , חדשנות  ומצויינות.
@@ -106,5 +106,5 @@ export default class About extends Component {
 
 const headerStyle = {
     color: '#eba235',
-    textShadow: '0px 0px 10px rgb(0 0 0 / 30%)'
+    textShadow: '0px 0px 10px rgb(0 0 0 / 30%)',
 }

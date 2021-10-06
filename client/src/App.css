@@ -187,9 +187,9 @@ body {
 
 .elementor-section{
   background-attachment: fixed;
-  margin-top: 65px;
-
+  margin-top: 64.6px;
 }
+
 .elementor-shape-bottom {
   bottom: -1px;
 }
@@ -295,15 +295,18 @@ body {
 
 .services{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 button{
   all: unset;
 }
 .icon{
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   background-color: white;
+  opacity: 0.7;
   border-radius: 100px;
   margin-bottom: 12px;
   display: flex;
@@ -329,7 +332,7 @@ button{
 }
 .service-item{
   color:#eba235;
-  
+  max-width: 160px;
   /* opacity: 0.6; */
   transition: All 1s ease;
 
@@ -370,6 +373,7 @@ button{
   /* width: 100vw; */
 }
 .social{
+  z-index: 1;
   display: flex;
   flex-direction: column;
   /* margin-top: 100px; */
@@ -397,4 +401,89 @@ button{
 .orange-modal .modal-content{
   background-color: #eba235;
   color: rgba(255, 255, 255, 0.712);
+}
+
+.about-text{
+  opacity: 0.7;
+}
+
+@media(max-width:751px){
+  .service-item{
+    max-width: 130px;
+  }
+  .icon{
+    max-width: 130px;
+    max-height: 130px;
+  }
+  .garden-icon{
+    max-width: 70px;
+    max-height: 70px;
+  }
+  .project-icon{
+    max-width: 60px;
+    max-height: 60px;
+  }
+}
+
+@media(max-width:575px){
+  .service-item{
+    max-width: 100px;
+  }
+  .icon{
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .garden-icon{
+    max-width: 70px;
+    max-height: 70px;
+  }
+  .project-icon{
+    max-width: 60px;
+    max-height: 60px;
+  }
+  .elementor-section{
+    margin-top: 56px;
+  }
+}
+
+@media(max-width:420px){
+  .service-item{
+    max-width: 80px;
+  }
+  .icon{
+    max-width: 80px;
+    max-height: 80px;
+  }
+  .garden-icon{
+    max-width: 45px;
+    max-height: 45px;
+  }
+  .project-icon{
+    max-width: 35px;
+    max-height: 35px;
+  }
+  .service-header{
+    font-size: 16px;
+  }
+}
+
+@media(max-width:325px){
+  .service-item{
+    max-width: 70px;
+  }
+  .icon{
+    max-width: 70px;
+    max-height: 70px;
+  }
+  .garden-icon{
+    max-width: 45px;
+    max-height: 45px;
+  }
+  .project-icon{
+    max-width: 37px;
+    max-height: 37px;
+  }
+  .service-header{
+    font-size: 16px;
+  }
 }

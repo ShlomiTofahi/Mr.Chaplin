@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 // const config = require('config');
 // const fileUpload = require('express-fileupload');
 var fs = require('fs');
+const mailService = require('./services/mailService');
 
 const path = require('path');
 
@@ -14,6 +15,56 @@ app.use(express.json());
 // app.use(fileUpload({
 //   limits: { fileSize: 5 * 1024 * 1024 },
 // }));
+
+// Upload Endpoint
+app.post('/send-mail', (req, res) => {
+  try {
+    const { name, phone, email, message } = req.body;
+
+    let recipients = [];
+    let mangasTag = ''
+    mangasSelected.sort().map((manga, index) => {
+        if (index + 1 !== mangasSelected.length)
+            mangasTag += `&nbsp;` + manga + `,&nbsp;`;
+        else
+            mangasTag += `&nbsp;` + manga + `&nbsp;`;
+
+    })
+    mangasTag = `<span style="color:#c914c3">&nbsp;` + mangasTag + `&nbsp;<span>`
+    output = `
+    <div align='center'>
+    <h2 style="color:white;
+               background-color:#fb6af7;
+               text-align:center;
+               border: solid 1px #c914c3;
+               letter-spacing: 8px;">
+      New Post Arrived!!
+      </h2><br />
+    <hr />
+    <span style="font-family: Arial, Helvetica, sans-serif;
+    font-size:16px;
+    letter-spacing: .1rem;">
+    <p>
+      Hello Kozeer's members,<br /> 
+      New episodes </p>`+ mangasTag + `<p style="color:black">have been posted on our site.<br /> 
+      For more information visit:<br /> 
+      <a href='www.kozeerofficial.com'>www.kozeerofficial.com</a>
+      <br />
+      <br />
+      Thanks, <br />
+      Kozeer team.
+    </p>
+    <hr style="color:black" />
+    <div>
+`
+
+    mailService.sendMail(recipients, output)
+    return res.json({ fileName: filename, filePath: `${abspath}${filename}` });
+
+  } catch (err) {
+    return res.status(500).send(err);
+  }
+});
 
 // Upload Endpoint
 // app.post('/upload', (req, res) => {

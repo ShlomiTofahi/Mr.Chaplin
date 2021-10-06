@@ -34,7 +34,7 @@ export default class About extends Component {
 
     render() {
         return (
-            <div id="services" style={this.aboutStyle()} className=' my-5'>
+            <div id="services" className=' my-5'>
                 <div className='services my-5'>
                     <div className='service-item animated bounceIn'>
                         <button className='icon' onClick={this.CollapseHangdle.bind(this, 'clean')}>
