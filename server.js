@@ -16,50 +16,37 @@ app.use(express.json());
 //   limits: { fileSize: 5 * 1024 * 1024 },
 // }));
 
-// Upload Endpoint
 app.post('/send-mail', (req, res) => {
   try {
     const { name, phone, email, message } = req.body;
-
-    let recipients = [];
-    let mangasTag = ''
-    mangasSelected.sort().map((manga, index) => {
-        if (index + 1 !== mangasSelected.length)
-            mangasTag += `&nbsp;` + manga + `,&nbsp;`;
-        else
-            mangasTag += `&nbsp;` + manga + `&nbsp;`;
-
-    })
-    mangasTag = `<span style="color:#c914c3">&nbsp;` + mangasTag + `&nbsp;<span>`
     output = `
     <div align='center'>
     <h2 style="color:white;
-               background-color:#fb6af7;
+               background-color:#eba235;
                text-align:center;
-               border: solid 1px #c914c3;
+               border: solid 1px #af6900;
                letter-spacing: 8px;">
-      New Post Arrived!!
-      </h2><br />
+               יש לך בקשה ליצירת קשר חדשה  
+    </h2><br />
     <hr />
     <span style="font-family: Arial, Helvetica, sans-serif;
     font-size:16px;
     letter-spacing: .1rem;">
-    <p>
-      Hello Kozeer's members,<br /> 
-      New episodes </p>`+ mangasTag + `<p style="color:black">have been posted on our site.<br /> 
-      For more information visit:<br /> 
-      <a href='www.kozeerofficial.com'>www.kozeerofficial.com</a>
-      <br />
-      <br />
-      Thanks, <br />
-      Kozeer team.
-    </p>
+    <h3>פרטי קשר:</h3>
+    <div>  
+      <div>שם: ${name}</div>
+      <div>אימייל: ${email}</div>
+      <div>טלפון: ${phone}</div>
+    </div>
+    <h3>הודעה:</h3>
+    <p>${message}</p>
     <hr style="color:black" />
     <div>
 `
 
-    mailService.sendMail(recipients, output)
-    return res.json({ fileName: filename, filePath: `${abspath}${filename}` });
+    mailService.sendMail("mr.chaplin.oded@gmail.com", email, name, phone, output)
+    // mailService.receiveMail(email,"יצירת קשר" ,name, phone, message)
+    return res.status(204).send({ msg: "success" });
 
   } catch (err) {
     return res.status(500).send(err);

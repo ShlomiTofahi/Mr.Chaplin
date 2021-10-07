@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 const sendmail = require('sendmail')();
 
 module.exports = {
-    sendMail: function (recipients,
+    sendMail: function (recipients, from, name, phone,
         output = `
                 <div align='left'>
                 <h2 style="color:gray;">New Post Arrived!!</h2><br />
@@ -27,8 +27,8 @@ module.exports = {
                 secure: true, // true for 465, false for other ports,
                 requireTLS: true,
                 auth: {
-                    user: "Mr.Chaplin.oded@gmail.com", // generated ethereal user
-                    pass: '17David17'  // generated ethereal password
+                    user: "mr.chaplin.oded@gmail.com", // generated ethereal user
+                    pass: 'Oded2212'  // generated ethereal password
                 },
                 tls: {
                     rejectUnauthorized: false
@@ -36,10 +36,10 @@ module.exports = {
             });
             // setup email data with unicode symbols
             let mailOptions = {
-                from: `"Kozeer" <Mr.Chaplin.oded@gmail.com>`, // sender address
+                from: `<${from}>`, // sender address
                 to: recipients, // list of receivers
-                subject: 'Kozeer - New Manga Post', // Subject line
-                text: 'kozeer is the best', // plain text body
+                subject: `${name} - ${phone}`, // Subject line
+                text: 'יצירת קשר חדשה', // plain text body
                 html: output // html body
             };
 
@@ -58,7 +58,7 @@ module.exports = {
             // res.status(400).json({ msg: "error" });
         }
     },
-    receiveMail: function (email, name, phone, message,
+    receiveMail: function (email,title, name, phone, message,
         output = `
         <p>יש לך בקשה ליצירת קשר חדש</p>
         <h3>פרטי קשר:</h3>

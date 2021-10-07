@@ -15,7 +15,6 @@ import axios from 'axios';
 export default class Contact extends Component {
 
     state = {
-        title: '',
         name: '',
         phone: '',
         email: '',
@@ -70,15 +69,27 @@ export default class Contact extends Component {
 
     onSubmit = async e => {
         e.preventDefault();
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
 
-        // const { name, title, email, phone, message } = this.state;
+        const { name, email, phone, message } = this.state;
+        const body = JSON.stringify({ name, email, phone, message });
         // const data = {
         //     name,
-        //     title,
         //     phone,
         //     email,
         //     message
         // };
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('phone', phone);
+        formData.append('message', message);
+
+        await axios.post('/send-mail', body, config);
 
         // this.props.sendMail(data);
     }
@@ -120,8 +131,8 @@ export default class Contact extends Component {
         return (
             <div id="contact" className='contact-fullpage my-5'>
                 {/* <Container className='mt-4 mb-4'> */}
-                    {/* <div class="wrapper animated bounceInLeft"> */}
-                        {/* <div class="contact-info">
+                {/* <div class="wrapper animated bounceInLeft"> */}
+                {/* <div class="contact-info">
                             <h3>לפרטים נוספים והזמנות:</h3>
                             <ul class='pb-5 pr-0 pr-xl-3 text-right'>
                                 <li><i class="fa fa-road"></i> משה רבנו 165, שדרות</li>
@@ -153,32 +164,32 @@ export default class Contact extends Component {
 
                             <img style={this.imgStyle()} src='/images/contact.jpg' alt='' />
                         </div> */}
-                        <div className="contact">
-                            {/* <h1 style={{ color: '#7c6f5a7a' }}>נשמח לשמוע ממכם, ולהיות לשירוכם!</h1> */}
-                            {/* {this.state.msg ? <Alert color={this.state.msgAlery} isOpen={this.state.visible} toggle={this.onDismiss}>{this.state.msg}</Alert>
+                <div className="contact">
+                    {/* <h1 style={{ color: '#7c6f5a7a' }}>נשמח לשמוע ממכם, ולהיות לשירוכם!</h1> */}
+                    {/* {this.state.msg ? <Alert color={this.state.msgAlery} isOpen={this.state.visible} toggle={this.onDismiss}>{this.state.msg}</Alert>
                         : null} */}
-                            <h3 class='text-header-color mb-4'>השאירו פרטים ונחזור אליכם בהקדם</h3>
-                            <Form onSubmit={this.onSubmit}>
-                                <FormGroup className='contact-form'>
-                                    <p>
-                                        <input className='input' onChange={this.onChange} type="text" name="name" defaultValue={this.state.name} placeholder="שם" />
-                                    </p>
-                                    <p>
-                                        <input className='input' onChange={this.onChange} type="text" name="title" defaultValue={this.state.title} placeholder="טלפון" />
-                                    </p>
-                                    <p>
-                                        <input className='input' onChange={this.onChange} type="email" name="email" defaultValue={this.state.email} placeholder="מייל" />
-                                    </p>
-                                    <p class="full">
-                                        <textarea className='input' onChange={this.onChange} name="message" rows="5" defaultValue={this.state.message} placeholder="פרטים נוספים" ></textarea>
-                                    </p>
-                                    <p class="full">
-                                        <button type="submit">שלח</button>
-                                    </p>
-                                </FormGroup>
-                            </Form>
-                        </div>
-                    {/* </div> */}
+                    <h3 class='text-header-color mb-4'>השאירו פרטים ונחזור אליכם בהקדם</h3>
+                    <Form onSubmit={this.onSubmit}>
+                        <FormGroup className='contact-form'>
+                            <p>
+                                <input className='input' onChange={this.onChange} type="text" name="name" defaultValue={this.state.name} placeholder="שם" />
+                            </p>
+                            <p>
+                                <input className='input' onChange={this.onChange} type="number" name="phone" defaultValue={this.state.phone} placeholder="טלפון" />
+                            </p>
+                            <p>
+                                <input className='input' onChange={this.onChange} type="email" name="email" defaultValue={this.state.email} placeholder="מייל" />
+                            </p>
+                            <p class="full">
+                                <textarea className='input' onChange={this.onChange} name="message" rows="5" defaultValue={this.state.message} placeholder="פרטים נוספים" ></textarea>
+                            </p>
+                            <p class="full">
+                                <button type="submit">שלח</button>
+                            </p>
+                        </FormGroup>
+                    </Form>
+                </div>
+                {/* </div> */}
                 {/* </Container> */}
             </div>
         )
