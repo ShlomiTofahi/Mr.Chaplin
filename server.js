@@ -18,8 +18,8 @@ app.use(express.json());
 
 app.post('/send-mail', (req, res) => {
   try {
-    const { name, phone, email, message } = req.body;
-    output = `
+    const { name, phone, email, message, livingArea } = req.body;
+    let output = `
     <div align='center'>
     <h2 style="color:white;
                background-color:#eba235;
@@ -43,6 +43,31 @@ app.post('/send-mail', (req, res) => {
     <hr style="color:black" />
     <div>
 `
+    console.log(livingArea)
+    if (livingArea) {
+      output = `
+    <div align='center'>
+    <h2 style="color:white;
+              background-color:#eba235;
+              text-align:center;
+              border: solid 1px #af6900;
+              letter-spacing: 8px;">
+              יש לך בקשה ליצירת קשר חדשה  
+    </h2><br />
+    <hr />
+    <span style="font-family: Arial, Helvetica, sans-serif;
+    font-size:16px;
+    letter-spacing: .1rem;">
+    <h3>פרטי קשר:</h3>
+    <div>  
+      <div>שם: ${name}</div>
+      <div>טלפון: ${phone}</div>
+      <div>אזור מגורים: ${livingArea}</div>
+    </div>
+    <hr style="color:black" />
+    <div>
+  `
+    }
 
     mailService.sendMail("mr.chaplin.oded@gmail.com", email, name, phone, output)
     // mailService.receiveMail(email,"יצירת קשר" ,name, phone, message)

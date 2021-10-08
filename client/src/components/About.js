@@ -19,6 +19,16 @@ export default class About extends Component {
             color: 'white',
             width: window.innerWidth >= 992 ? '60%' : '90%',
             padding: '24px',
+            backgroundImage: `url(/images/bgAbout.jpg)`,
+            backgroundAttachment: 'fixed',
+            backgroundSize: 'contain',
+            backgroundPosition: 'center left',
+
+            backgroundSize: 'cover',
+            // backgroundPosition: 'center',
+            objectFit: 'cover',
+            backgroundRepeat: 'no-repeat',
+            width: '100%'
             // opacity: '0.7',
 
         };
@@ -27,6 +37,7 @@ export default class About extends Component {
     render() {
         return (
             <div id="about" className=' my-5' align='right' style={this.aboutStyle()}>
+                <br />
                 {/* <h2 align='center' className='brand display-4 pt-4' style={window.innerWidth >= 992 ? { fontFamily: "'Shadows Into Light', Kimberly Geswein", opacity: '0.4' } : { fontFamily: "'Shadows Into Light', Kimberly Geswein", opacity: '0.4', fontSize: '2.0em' }}>
                             החזון שלנו
                         </h2> */}
@@ -36,68 +47,77 @@ export default class About extends Component {
                 </h2>
                 <p className='about-text lead mt-5'>
                     <strong className='text-bold'>
-                        מיסטר צ׳פלין הינה חברה העוסקת בניהול ואחזקת מבנים , תפעול וביצוע פרויקטים רב תחומיים.
-                        חברתנו שמה לעצמה כערך עליון שקיפות והגינות מקסימלית מול הלקוח , חדשנות  ומצויינות.
+                        <strong className='text-bold text-Highlighted'>
+                            מיסטר צ׳פלין הינה חברה העוסקת בניהול ואחזקת מבנים , תפעול וביצוע פרויקטים רב תחומיים.
+                            <br />
+                            חברתנו שמה לעצמה כערך עליון שקיפות והגינות מקסימלית מול הלקוח , חדשנות  ומצויינות.
+                        </strong>
+                        <br />
+                        <br />
+                        {
+                            !this.state.readMore &&
+                            <button className="text-bold regular-btn" onClick={this.collapseToggle}>קרא עוד</button>
+                        }
+                        <Collapse isOpened={this.state.readMore}>
+                            לקוחותנו יכולים להנות מ
+                            <strong className='text-bold text-Highlighted'>
+                                אפליקציה חדשנית&nbsp;
+                            </strong>
+                            לניהול מבנים המאפשרת מענה מהיר ו
+                            <strong className='text-bold text-Highlighted'>
+                                זמינות&nbsp;
+                            </strong>
+                            24/7
+                            <br /><br />
+                            ה
+                            <strong className='text-bold text-Highlighted'>
+                                צוותים&nbsp;
+                            </strong>
+
+                            שלנו מיומנים כל אחד בתחומו ולרשתנו כל הציוד הנדרש
+                            <br />
+                            על מנת לתת לכם את השירות הכי
+                            <strong className='text-bold text-Highlighted'>
+                                &nbsp;מהיר ומקצועי&nbsp;
+                            </strong>
+                            <br />
+                            ובכך להבטיח את שימור
+                            <strong className='text-bold text-Highlighted'>
+                                &nbsp;אורח החיים&nbsp;
+                            </strong>
+                            בסביבות
+                            המגורים / העבודה שלכם.
+                            <br /><br />
+                            כמו כן אנו שמים דגש על רמת ה
+                            <strong className='text-bold text-Highlighted'>
+                                בטיחות&nbsp;
+                            </strong>
+
+                            הנדרשת בהתאם לתו תקן
+                            <br />
+                            כדי להבטיח את רמת הביטחון המקסימלית ללקוחות ולעובדים שלנו
+                            <br /><br />
+                            לכל מבנה יש צרכים משלו לכן אנו ממליצים לקבוע
+                            <strong className='text-bold text-Highlighted'>
+                                &nbsp;פגישת יעוץ בחינם&nbsp;
+                            </strong>
+                            <br />
+                            על מנת שנוכל להבין את הצרכים של המבנה שלכם
+                            <br />
+                            ובכך לבנות יחד אתכם
+                            <strong className='text-bold text-Highlighted'>
+                                &nbsp;תוכנית&nbsp;
+                            </strong>
+
+                            עבודה מתאימה שתספק לכם את כלל הצרכים
+                            <strong className='text-bold text-Highlighted'>
+                                &nbsp;במידה הגבוהה ביותר&nbsp;
+                            </strong>
+                            .
+                            <br /><br />
+                            <button className="text-bold regular-btn" onClick={this.collapseToggle}>קרא פחות</button>
+                        </Collapse>
                     </strong>
-                    <br />
-                    <br />
-                    {
-                    !this.state.readMore &&
-                    <button className="text-bold regular-btn" onClick={this.collapseToggle}>קרא עוד</button>
-                    }
-                    <Collapse isOpened={this.state.readMore}>
-                        לקוחותנו יכולים להנות מ
-                        <strong className='text-bold'>
-                            אפליקציה חדשנית&nbsp;
-                        </strong>
-                        לניהול מבנים המאפשרת מענה מהיר ו
-                        <strong className='text-bold'>
-                            זמינות&nbsp;
-                        </strong>
-                        24/7
-                        <br /><br />
-                        ה
-                        <strong className='text-bold'>
-                            צוותים&nbsp;
-                        </strong>
-
-                        שלנו מיומנים כל אחד בתחומו ולרשתנו כל הציוד הנדרש על מנת לתת לכם את השירות הכי
-                        <strong className='text-bold'>
-                            &nbsp;מהיר ומקצועי&nbsp;
-                        </strong>
-
-                        ובכך להבטיח את שימור
-                        <strong className='text-bold'>
-                            &nbsp;אורח החיים&nbsp;
-                        </strong>
-                        בסביבות
-                        המגורים / העבודה שלכם.
-                        <br /><br />
-                        כמו כן אנו שמים דגש על רמת ה
-                        <strong className='text-bold'>
-                            בטיחות&nbsp;
-                        </strong>
-
-                        הנדרשת בהתאם לתו תקן כדי להבטיח את רמת הביטחון המקסימלית ללקוחות ולעובדים שלנו
-                        <br /><br />
-                        לכל מבנה יש צרכים משלו לכן אנו ממליצים לקבוע
-                        <strong className='text-bold'>
-                            &nbsp;פגישת יעוץ בחינם&nbsp;
-                        </strong>
-
-                        על מנת שנוכל להבין את הצרכים של המבנה שלכם ובכך לבנות יחד אתכם
-                        <strong className='text-bold'>
-                            &nbsp;תוכנית&nbsp;
-                        </strong>
-
-                        עבודה מתאימה שתספק לכם את כלל הצרכים
-                        <strong className='text-bold'>
-                            &nbsp;במידה הגבוהה ביותר&nbsp;
-                        </strong>
-                        .
-                        <br /><br />
-                        <button className="text-bold regular-btn" onClick={this.collapseToggle}>קרא פחות</button>
-                    </Collapse>
                 </p>
             </div>
         )
@@ -107,4 +127,6 @@ export default class About extends Component {
 const headerStyle = {
     color: '#eba235',
     textShadow: '0px 0px 10px rgb(0 0 0 / 30%)',
+    fontWeight: '600'
+
 }

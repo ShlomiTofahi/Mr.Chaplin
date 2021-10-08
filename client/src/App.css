@@ -231,10 +231,20 @@ body {
   color: #ffffff;
 }
 
-
-
-
-
+.offer-btn{
+  margin-top:10px;
+  background-color:#eba235;
+  opacity: 0.9;
+  padding: 10px;
+  padding-right:18px;
+  border-radius: 28px 28px 28px 28px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.offer-btn:hover{
+  background-color:#eba235;
+  opacity: 0.8;
+}
 
 
 .contact-fullpage{
@@ -299,6 +309,11 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
 }
+
+.side-padding{
+  padding: 0 38px;
+}
+
 button{
   all: unset;
 }
@@ -383,13 +398,6 @@ button{
   top:30%;
 }
 
-.text-bold{
-  opacity: 1;
-  /* font-family: 'Assistant', sans-serif; */
-
-  font-weight: 500;
-  /* color:red; */
-}
 
 .regular-btn{
   color:#eba235;
@@ -399,12 +407,54 @@ button{
 }
 
 .orange-modal .modal-content{
-  background-color: #eba235;
+  /* background-color: #eba235; */
+  background-image: url('/images/bgOrange2.jpg'); 
+  background-size: cover;
+  background-position: bottom left;
+
   color: rgba(255, 255, 255, 0.712);
+  border-radius: 50%;
+  padding: 24px;
+  opacity: 0.9;
+
 }
 
+.orange-offer-modal .modal-content{
+  /* background-color: #eba235; */
+  background-image: url('/images/bgOrange2.jpg'); 
+  background-size: cover;
+  background-position: bottom left;
+
+  color: rgba(255, 255, 255, 0.712);
+  border-radius: 50%;
+  padding: 24px;
+  opacity: 0.9;
+
+}
+
+
 .about-text{
-  opacity: 0.7;
+  opacity: 0.9;
+  font-weight: 700;
+  /* -webkit-text-stroke: 1px rgba(0, 0, 0, 0.600);  */
+  /* opacity: 1; */
+  text-shadow: -1px 0 #282c34, 0 1px #282c34, 1px 0 #282c34, 0 -1px #282c34;
+
+
+} 
+
+.text-bold{
+  /* font-family: 'Assistant', sans-serif; */
+
+  font-weight: 700;
+  /* color:red; */
+}
+.text-Highlighted{
+  color:#282c34;
+  text-shadow: none;
+  text-shadow: -1px 0 #e0e0e0, 0 1px #e0e0e0, 1px 0 #e0e0e0, 0 -1px #e0e0e0;
+
+  /* -webkit-text-stroke: none !important; */
 }
 
 @media(max-width:751px){
@@ -486,4 +536,16 @@ button{
   .service-header{
     font-size: 16px;
   }
+}
+
+.color-facebook{
+  color:#4267B2;
+}
+
+.color-instagram{
+  color:#C13584;
+}
+
+.color-whatsapp{
+  color:#075e54;
 }

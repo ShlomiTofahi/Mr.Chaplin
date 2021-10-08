@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import OfferModal from '../OfferModal';
 
 export default class CoverImage extends Component {
     state = {
@@ -38,14 +39,21 @@ export default class CoverImage extends Component {
                                         <div class="elementor-element elementor-element-06e8859 elementor-align-center elementor-widget elementor-widget-button" data-id="06e8859" data-element_type="widget" data-widget_type="button.default">
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-button-wrapper">
-                                                    <a href="tel:054-8353066" class="elementor-button-link elementor-button elementor-size-md" role="button"> <span class="elementor-button-content-wrapper">
+                                                    <OfferModal />
+                                                    {/* <button className='offer-btn'>
+                                                        <span>להצעת מחיר</span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                                                        </svg>
+                                                    </button> */}
+                                                    {/* <a href="tel:054-8353066" class="elementor-button-link elementor-button elementor-size-md" role="button"> <span class="elementor-button-content-wrapper">
                                                         <span class="elementor-button-icon elementor-align-icon-right">
                                                             <i aria-hidden="true" class="fas fa-phone-alt">
                                                             </i>
                                                         </span>
-                                                        {/* <span class="elementor-button-text">054-8353066</span> */}
+                                                        <span class="elementor-button-text">054-8353066</span>
                                                     </span>
-                                                    </a>
+                                                    </a> */}
                                                 </div>
                                             </div>
                                         </div>
