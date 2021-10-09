@@ -61,6 +61,7 @@ body {
   background-size: cover;
   background-position: center;
   object-fit: cover;
+  object-fit:contain;
 
   transition: All 1s ease;
   -webkit-transition: All 1s ease;
@@ -419,18 +420,6 @@ button{
 
 }
 
-.orange-offer-modal .modal-content{
-  /* background-color: #eba235; */
-  background-image: url('/images/bgOrange2.jpg'); 
-  background-size: cover;
-  background-position: bottom left;
-
-  color: rgba(255, 255, 255, 0.712);
-  border-radius: 50%;
-  padding: 24px;
-  opacity: 0.9;
-
-}
 
 
 .about-text{

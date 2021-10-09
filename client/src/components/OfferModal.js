@@ -143,7 +143,7 @@ export default class Contact extends Component {
                         <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
                     </svg>
                 </button>
-                <Modal align="center" isOpen={this.state.modal} toggle={this.toggle} onClosed={this.close} className="orange-offer-modal">
+                <Modal align="center" isOpen={this.state.modal} toggle={this.toggle} onClosed={this.close} className="orange-modal">
                     {/* <ModalHeader cssModule={{ 'modal-title': 'w-100 text-center' }} toggle={this.toggle}> */}
                     {/* </ModalHeader> */}
 

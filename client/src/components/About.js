@@ -22,14 +22,15 @@ export default class About extends Component {
             backgroundImage: `url(/images/bgAbout.jpg)`,
             backgroundAttachment: 'fixed',
             backgroundSize: 'contain',
-            backgroundPosition: 'center left',
+            backgroundPosition: 'top right',
 
             backgroundSize: 'cover',
             // backgroundPosition: 'center',
             objectFit: 'cover',
             backgroundRepeat: 'no-repeat',
-            width: '100%'
+            width: '100%',
             // opacity: '0.7',
+            position: 'relative',
 
         };
     };
@@ -38,14 +39,14 @@ export default class About extends Component {
         return (
             <div id="about" className=' my-5' align='right' style={this.aboutStyle()}>
                 <br />
-                {/* <h2 align='center' className='brand display-4 pt-4' style={window.innerWidth >= 992 ? { fontFamily: "'Shadows Into Light', Kimberly Geswein", opacity: '0.4' } : { fontFamily: "'Shadows Into Light', Kimberly Geswein", opacity: '0.4', fontSize: '2.0em' }}>
-                            החזון שלנו
-                        </h2> */}
-                <h2 style={headerStyle} align='center' className='display-1'>
-                    הניהול שלנו <br />
-                    השקט שלכם
-                </h2>
                 <p className='about-text lead mt-5'>
+                    <h2 style={headerStyle} align='center' className='display-1'>
+                        הניהול שלנו <br />
+                        השקט שלכם
+                    </h2>
+                    <br />
+
+                    <img style={logoStyle} src="/images/chaplin.png" />
                     <strong className='text-bold'>
                         <strong className='text-bold text-Highlighted'>
                             מיסטר צ׳פלין הינה חברה העוסקת בניהול ואחזקת מבנים , תפעול וביצוע פרויקטים רב תחומיים.
@@ -59,6 +60,8 @@ export default class About extends Component {
                             <button className="text-bold regular-btn" onClick={this.collapseToggle}>קרא עוד</button>
                         }
                         <Collapse isOpened={this.state.readMore}>
+                            {/* <div style={headerLogoStyle} align="left"> */}
+                            {/* </div> */}
                             לקוחותנו יכולים להנות מ
                             <strong className='text-bold text-Highlighted'>
                                 אפליקציה חדשנית&nbsp;
@@ -122,6 +125,30 @@ export default class About extends Component {
             </div>
         )
     }
+}
+
+const logoStyle = {
+    position: 'absolute',
+    zIndex: '-1',
+
+    maxWidth: '100%',
+    height: 'auto',
+    bottom: 0,
+    opacity: 0.89,
+
+    // left: window.innerWidth / 4 + 'px',
+    left: 0,
+    // right:0,
+    // marginLeft:"auto",
+    // marginRight:"auto",
+    // maxWidth: window.innerWidth / 2 + 'px',
+}
+const headerLogoStyle = {
+    position: 'relative',
+    // margin: '0 auto',
+    // zIndex: '-1',
+
+    // paddingTop: window.innerWidth / 4.57 + 'px'
 }
 
 const headerStyle = {
