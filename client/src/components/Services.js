@@ -38,7 +38,7 @@ export default class About extends Component {
                             <br /><br />
 
                 <div className='services my-5'>
-                    <div className='service-item' data-aos='fade-left' data-aos-delay="1000">
+                    <div className='service-item' data-aos='fade-right' data-aos-delay="1000">
                         <button className='icon' onClick={this.CollapseHangdle.bind(this, 'clean')}>
                             <img className='garden-icon' src="/icons/clean-icon.png" />
                         </button>
@@ -56,7 +56,7 @@ export default class About extends Component {
                         </button>
                         <h4 className='service-header'>שירותי גינון</h4>
                     </div>
-                    <div className='service-item' data-aos='fade-right' data-aos-delay="500">
+                    <div className='service-item' data-aos='fade-left' data-aos-delay="500">
                         <button className='icon' onClick={this.CollapseHangdle.bind(this, 'project')}>
                             <img className='project-icon' src="/icons/project-icon.png" />
                         </button>
