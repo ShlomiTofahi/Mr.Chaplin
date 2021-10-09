@@ -70,7 +70,9 @@ export default class About extends Component {
                             <strong className='text-bold text-Highlighted'>
                                 זמינות&nbsp;
                             </strong>
+                            <strong className='text-header-color'>
                             24/7
+                            </strong>
                             <br /><br />
                             ה
                             <strong className='text-bold text-Highlighted'>
