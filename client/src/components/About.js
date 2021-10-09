@@ -37,16 +37,15 @@ export default class About extends Component {
 
     render() {
         return (
-            <div id="about" className=' my-5' align='right' style={this.aboutStyle()}>
+            <div id="about" className='my-5' align='right' style={this.aboutStyle()}>
                 <br />
-                <p className='about-text lead mt-5'>
-                    <h2 style={headerStyle} align='center' className='display-1'>
-                        הניהול שלנו <br />
-                        השקט שלכם
+                <p className='about-text lead pt-5'>
+                    <h2 style={headerStyle} align='center' className='display-1' data-aos='fade-up'>
+                        הניהול שלנו-השקט שלכם
                     </h2>
                     <br />
 
-                    <img style={logoStyle} src="/images/chaplin.png" />
+                    <img style={logoStyle} src="/images/chaplin.png" data-aos='fade-left' />
                     <strong className='text-bold'>
                         <strong className='text-bold text-Highlighted'>
                             מיסטר צ׳פלין הינה חברה העוסקת בניהול ואחזקת מבנים, תפעול וביצוע פרויקטים רב תחומיים.
@@ -57,7 +56,10 @@ export default class About extends Component {
                         <br />
                         {
                             !this.state.readMore &&
-                            <button className="text-bold regular-btn" onClick={this.collapseToggle}>קרא עוד</button>
+                            <button className="text-bold regular-btn" onClick={this.collapseToggle}
+                                data-aos="flip-up"
+                                data-aos-anchor-placement="top-bottom"
+                            >קרא עוד</button>
                         }
                         <Collapse isOpened={this.state.readMore}>
                             {/* <div style={headerLogoStyle} align="left"> */}
@@ -71,7 +73,7 @@ export default class About extends Component {
                                 זמינות&nbsp;
                             </strong>
                             <strong className='text-header-color'>
-                            24/7
+                                24/7
                             </strong>
                             <br /><br />
                             ה
@@ -120,7 +122,10 @@ export default class About extends Component {
                             </strong>
                             .
                             <br /><br />
-                            <button className="text-bold regular-btn" onClick={this.collapseToggle}>קרא פחות</button>
+                            <button className="text-bold regular-btn" onClick={this.collapseToggle}
+                                data-aos="flip-down"
+                                data-aos-anchor-placement="top-bottom"
+                            >קרא פחות</button>
                         </Collapse>
                     </strong>
                 </p>
@@ -154,6 +159,8 @@ const headerLogoStyle = {
 }
 
 const headerStyle = {
+    // paddingBottom: '65px',
+    paddingBottom: '90px',
     color: '#eba235',
     textShadow: '0px 0px 10px rgb(0 0 0 / 30%)',
     fontWeight: '600'

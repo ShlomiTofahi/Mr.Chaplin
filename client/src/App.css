@@ -185,6 +185,11 @@ body {
   color:#eba235;
   letter-spacing: 6px;
 }
+.elementor-heading-title{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .elementor-section{
   background-attachment: fixed;

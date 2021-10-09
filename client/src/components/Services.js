@@ -38,32 +38,32 @@ export default class About extends Component {
                             <br /><br />
 
                 <div className='services my-5'>
-                    <div className='service-item animated bounceIn'>
+                    <div className='service-item' data-aos='fade-left' data-aos-delay="1000">
                         <button className='icon' onClick={this.CollapseHangdle.bind(this, 'clean')}>
                             <img className='garden-icon' src="/icons/clean-icon.png" />
                         </button>
                         <h4 className='service-header'>שירותי נקיון</h4>
                     </div>
-                    <div className='service-item animated bounceIn'>
+                    <div className='service-item' data-aos='zoom-in-up'>
                         <button className='icon' onClick={this.CollapseHangdle.bind(this, 'maintenance')}>
                             <img className='garden-icon' src="/icons/maintenance-icon.png" />
                         </button>
                         <h4 className='service-header'>ניהול ואחזקת מבנים</h4>
                     </div>
-                    <div className='service-item animated bounceIn'>
+                    <div className='service-item' data-aos='zoom-in-down' data-aos-delay="1500">
                         <button className='icon' onClick={this.CollapseHangdle.bind(this, 'gardening')}>
                             <img className='garden-icon' src="/icons/gardening-icon.png" />
                         </button>
                         <h4 className='service-header'>שירותי גינון</h4>
                     </div>
-                    <div className='service-item animated bounceIn'>
+                    <div className='service-item' data-aos='fade-right' data-aos-delay="500">
                         <button className='icon' onClick={this.CollapseHangdle.bind(this, 'project')}>
                             <img className='project-icon' src="/icons/project-icon.png" />
                         </button>
                         <h4 className='service-header'>פרויקטים</h4>
                     </div>
                 </div>
-                <div className='side-padding'>
+                <div className='side-padding' data-aos='zoom-in'>
                     <Collapse isOpened={this.state.collapsetoggle === 'clean'}>
                         <small><p
                             className='opacity'

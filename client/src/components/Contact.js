@@ -176,22 +176,22 @@ export default class Contact extends Component {
                         {/* <h1 style={{ color: '#7c6f5a7a' }}>נשמח לשמוע ממכם, ולהיות לשירוכם!</h1> */}
                         {/* {this.state.msg ? <Alert color={this.state.msgAlery} isOpen={this.state.visible} toggle={this.onDismiss}>{this.state.msg}</Alert>
                         : null} */}
-                        <h3 class='text-header-color mb-4'>השאירו פרטים ונחזור אליכם בהקדם</h3>
+                        <h3 class='text-header-color mb-4' data-aos='fade-left'>השאירו פרטים ונחזור אליכם בהקדם</h3>
                         <Form onSubmit={this.onSubmit}>
                             <FormGroup className='contact-form'>
-                                <p>
+                                <p data-aos='fade-left' data-aos-delay="500">
                                     <input className='input' onChange={this.onChange} type="text" name="name" defaultValue={this.state.name} placeholder="שם" />
                                 </p>
-                                <p>
+                                <p data-aos='fade-left' data-aos-delay="1000">
                                     <input className='input' onChange={this.onChange} type="text" name="phone" defaultValue={this.state.phone} placeholder="טלפון" />
                                 </p>
-                                <p>
+                                <p data-aos='fade-left' data-aos-delay="1500">
                                     <input className='input' onChange={this.onChange} type="email" name="email" defaultValue={this.state.email} placeholder="מייל" />
                                 </p>
-                                <p class="full">
+                                <p class="full" data-aos='fade-left' data-aos-delay="2000">
                                     <textarea className='input' onChange={this.onChange} name="message" rows="5" defaultValue={this.state.message} placeholder="פרטים נוספים" ></textarea>
                                 </p>
-                                <div class="full">
+                                <div class="full" data-aos='fade-left' data-aos-delay="2500" data-aos-anchor-placement="top-bottom">
                                     <button type="submit">שלח</button>
                                 </div>
                             </FormGroup>
