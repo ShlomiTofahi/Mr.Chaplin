@@ -49,9 +49,9 @@ export default class About extends Component {
                     <img style={logoStyle} src="/images/chaplin.png" />
                     <strong className='text-bold'>
                         <strong className='text-bold text-Highlighted'>
-                            מיסטר צ׳פלין הינה חברה העוסקת בניהול ואחזקת מבנים , תפעול וביצוע פרויקטים רב תחומיים.
+                            מיסטר צ׳פלין הינה חברה העוסקת בניהול ואחזקת מבנים, תפעול וביצוע פרויקטים רב תחומיים.
                             <br />
-                            חברתנו שמה לעצמה כערך עליון שקיפות והגינות מקסימלית מול הלקוח , חדשנות  ומצויינות.
+                            חברתנו שמה לעצמה כערך עליון שקיפות והגינות מקסימלית מול הלקוח, חדשנית ומצויינות.
                         </strong>
                         <br />
                         <br />
