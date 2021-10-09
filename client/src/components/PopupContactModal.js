@@ -30,7 +30,7 @@ export default class Contact extends Component {
 
     componentDidMount() {
         // this.fadeout()
-        window.setTimeout(this.fadeout, 20000);
+        window.setTimeout(this.fadeout, 12000);
     }
 
     fadeout = () => {
