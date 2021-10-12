@@ -45,7 +45,10 @@ export default class About extends Component {
                     </h2>
                     <br />
 
-                    <img style={logoStyle} src="/images/chaplin.png" data-aos='fade-left' />
+                    <img style={logoStyle} src="/images/chaplin.png"
+                        data-aos='fade-left'
+                        data-aos-anchor-placement="top-bottom"
+                    />
                     <strong className='text-bold'>
                         <strong className='text-bold text-Highlighted'>
                             מיסטר צ׳פלין הינה חברה העוסקת בניהול ואחזקת מבנים , תפעול וביצוע פרויקטים רב תחומיים.
@@ -100,7 +103,7 @@ export default class About extends Component {
                                 בטיחות&nbsp;
                             </strong>
 
-                            הנדרשת 
+                            הנדרשת
                             {/* בהתאם לתו תקן */}
                             <br />
                             כדי להבטיח את רמת הביטחון המקסימלית ללקוחות ולעובדים שלנו
