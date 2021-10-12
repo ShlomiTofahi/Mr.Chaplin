@@ -48,9 +48,9 @@ export default class About extends Component {
                     <img style={logoStyle} src="/images/chaplin.png" data-aos='fade-left' />
                     <strong className='text-bold'>
                         <strong className='text-bold text-Highlighted'>
-                            מיסטר צ׳פלין הינה חברה העוסקת בניהול ואחזקת מבנים, תפעול וביצוע פרויקטים רב תחומיים.
+                            מיסטר צ׳פלין הינה חברה העוסקת בניהול ואחזקת מבנים , תפעול וביצוע פרויקטים רב תחומיים.
                             <br />
-                            חברתנו שמה לעצמה כערך עליון שקיפות והגינות מקסימלית מול הלקוח, חדשנות ומצויינות.
+                            חברתנו שמה לעצמה כערך עליון שקיפות והגינות מקסימלית מול הלקוח , חדשנות  ומצויינות.
                         </strong>
                         <br />
                         <br />
@@ -100,9 +100,13 @@ export default class About extends Component {
                                 בטיחות&nbsp;
                             </strong>
 
-                            הנדרשת בהתאם לתו תקן
+                            הנדרשת 
+                            {/* בהתאם לתו תקן */}
                             <br />
                             כדי להבטיח את רמת הביטחון המקסימלית ללקוחות ולעובדים שלנו
+                            <br /><br />
+                            הסטנדרט שתקבלו אצלנו במסגרת שירותי האחזקה והנקיון הינו התו תקן הגבוהה ביותר ללא פשרות.
+
                             <br /><br />
                             לכל מבנה יש צרכים משלו לכן אנו ממליצים לקבוע
                             <strong className='text-bold text-Highlighted'>
